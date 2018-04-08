@@ -8,6 +8,8 @@ app = Flask(__name__)
 def glow_led():
 	data = request.args.get('class')
 	print ("hello in api", data)
+
+	return None
 	
 
 if __name__ == '__main__':

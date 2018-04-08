@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request
 from werkzeug import secure_filename
 import os
+from tester import runTest
 
 app = Flask(__name__)
 
@@ -27,6 +28,8 @@ def upload_file_completed():
 				secure_filename("img.jpg")
 				)
 			)
+
+		print (runTest())
 		return 'file uploaded successfully'
 
 if __name__ == '__main__':

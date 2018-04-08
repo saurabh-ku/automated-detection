@@ -43,7 +43,7 @@ def glow_led():
 	print ('Got class', predictedClass)
 
 	resetLed()
-	switchOnLed(imgClass)
+	switchOnLed(predictedClass)
 
 	return 'Pi task ended'
 	

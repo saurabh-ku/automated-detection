@@ -8,22 +8,22 @@ app = Flask(__name__)
 classToLed = [24, 25, 8, 7, 12]
 
 def switchOnLed(type):
-        GPIO.output(classToLed[type], True)
+	GPIO.output(classToLed[type], True)
 
 def switchOffLed(type):
-        GPIO.output(classToLed[type], False)
+	GPIO.output(classToLed[type], False)
 
 def resetLed():
-    for i in range(0, 5):
-        GPIO.output(classToLed[i], False)
-        time.sleep(0.2)
+	for i in range(0, 5):
+		GPIO.output(classToLed[i], False)
+		time.sleep(0.2)
 
 def testLights():
-    for i in range(0, 5):
-        print ("light up", i)
-        switchOnLed(i)
-        time.sleep(2)
-        switchOffLed(i)
+	for i in range(0, 5):
+		print ("light up", i)
+		switchOnLed(i)
+		time.sleep(2)
+		switchOffLed(i)
 
 def setup():
 	GPIO.setmode(GPIO.BCM)
@@ -43,7 +43,7 @@ def glow_led():
 
 	resetLed()
 	switchOnLed(imgClass)
-	
+
 	return 'Pi task ended'
 	
 

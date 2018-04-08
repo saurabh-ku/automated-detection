@@ -4,7 +4,7 @@ import os
 
 app = Flask(__name__)
 	
-@app.route('/glowled', methods = ['GET'])
+@app.route('/glowled', methods = ['GET', 'POST'])
 def glow_led():
 	print('hello 1')
 	data = request.args.get('class')

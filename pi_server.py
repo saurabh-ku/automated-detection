@@ -39,7 +39,7 @@ def setup():
 
 @app.route('/glowled', methods = ['GET', 'POST'])
 def glow_led():
-	predictedClass = request.args.get('class')
+	predictedClass = int(request.args.get('class'))
 	print ('Got class', predictedClass)
 
 	resetLed()

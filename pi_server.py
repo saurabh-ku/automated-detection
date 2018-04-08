@@ -27,14 +27,14 @@ def testLights():
 
 def setup():
 	GPIO.setmode(GPIO.BCM)
-    #Button to GPIO23
-    GPIO.setup(23, GPIO.IN, pull_up_down=GPIO.PUD_UP)	
-    #Led
-    GPIO.setup(24, GPIO.OUT)
-    GPIO.setup(25, GPIO.OUT)  
-    GPIO.setup(8, GPIO.OUT)  
-    GPIO.setup(7, GPIO.OUT)  
-    GPIO.setup(12, GPIO.OUT)
+	#Button to GPIO23
+	GPIO.setup(23, GPIO.IN, pull_up_down=GPIO.PUD_UP)	
+	#Led
+	GPIO.setup(24, GPIO.OUT)
+	GPIO.setup(25, GPIO.OUT)  
+	GPIO.setup(8, GPIO.OUT)  
+	GPIO.setup(7, GPIO.OUT)  
+	GPIO.setup(12, GPIO.OUT)
 
 @app.route('/glowled', methods = ['GET', 'POST'])
 def glow_led():

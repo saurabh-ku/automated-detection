@@ -17,7 +17,6 @@ app.config['UPLOAD_FOLDER'] = os.path.join(
 
 @app.route('/upload')
 def upload_file():
-	glowLedOnPi(2)
 	return render_template('upload.html')
 	
 @app.route('/uploader', methods = ['GET', 'POST'])
@@ -39,7 +38,8 @@ def glowLedOnPi(predictedClass):
 	addr = 'http://192.168.43.70:5000'
 	test_url = addr + '/glowled'
 
-	requests.post(test_url, data = {'class' : predictedClass})
+	payload = {'class': predictedClass}
+	requests.post(test_url, params = payload)
 
 if __name__ == '__main__':
 	app.run(host="0.0.0.0", port=5000, debug=False)

@@ -1,13 +1,13 @@
 from flask import Flask, render_template, request
 from werkzeug import secure_filename
 import os
-from tester import runTest
 
 app = Flask(__name__)
 	
-@app.route('/glowled', methods = ['GET', 'POST'])
+@app.route('/glowled', methods = ['GET'])
 def glow_led():
-	print ("hello in api")
+	data = request.args.get('class')
+	print ("hello in api", data)
 	
 
 if __name__ == '__main__':

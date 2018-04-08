@@ -35,7 +35,10 @@ def upload_file_completed():
 		return 'ran inference, predicted class', predictedClass
 
 def glowLedOnPi(predictedClass):
-	requests.get("192.168.43.70:5000/glowled")
+	addr = 'http://192.168.43.70:5000'
+	test_url = addr + '/glowled'
+
+	requests.post(test_url, data = {'class' : predictedClass})
 
 if __name__ == '__main__':
 	app.run(host="0.0.0.0", port=5000, debug=False)

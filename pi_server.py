@@ -51,6 +51,6 @@ if __name__ == '__main__':
 	setup()
 
 	resetLed()
-    switchOnLed(4)
+	switchOnLed(4)
 
 	app.run(host="0.0.0.0", port=5000, debug=False)

@@ -6,6 +6,7 @@ app = Flask(__name__)
 	
 @app.route('/glowled', methods = ['GET'])
 def glow_led():
+	print('hello 1')
 	data = request.args.get('class')
 	print ("hello in api", data)
 

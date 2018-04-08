@@ -17,6 +17,7 @@ app.config['UPLOAD_FOLDER'] = os.path.join(
 
 @app.route('/upload')
 def upload_file():
+	glowLedOnPi(2)
 	return render_template('upload.html')
 	
 @app.route('/uploader', methods = ['GET', 'POST'])
